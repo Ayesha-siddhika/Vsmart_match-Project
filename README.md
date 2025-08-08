@@ -1,67 +1,64 @@
-vSmart Match – Gen AI Powered, Talent Focused
-Overview
-vSmart Match is a GenAI-powered Talent-Focused platform built with the MERN stack, integrated with Langflow and LangSmith for intelligent resume parsing, certificate validation, scoring, and contextual skill analysis. Results are visualized through dashboards and radar charts to support smarter, faster hiring decisions.
+# vSmart Match – Gen AI Powered, Talent Focused
 
-Features
-Create and manage rich job descriptions
+## Overview
+vSmart Match is a GenAI-powered talent-focused platform built with the MERN stack. It integrates Langflow and LangSmith for intelligent resume parsing, certificate validation, scoring, and contextual skill analysis. The platform visualizes results using dashboards and radar charts to enable smarter, faster hiring decisions.
 
-Upload and parse resumes (PDFs)
+---
 
-GenAI-powered skill extraction, certificate validation, and resume scoring
+## Features
+- Create and manage rich job descriptions
+- Upload and parse resumes (PDFs)
+- GenAI-powered skill extraction, certificate validation, and resume scoring
+- Spider chart visualization using Chart.js
+- Filter candidates by job description, score, and category
+- Propose/reject candidates and export filtered results to CSV
+- GenAI-based chatbot for HR assistance
+- Dropbox integration for cloud resume storage
+- JWT authentication and user profile management
+- Langflow and LangSmith integration for contextual parsing, scoring, and traceable AI workflows
 
-Spider chart visualization using Chart.js
+---
 
-Filter candidates by job description, score, and category
+## Prerequisites
+Before running the project, ensure you have the following installed or configured:
 
-Propose/reject candidates and export filtered results to CSV
+- Node.js (v18 or higher)
+- npm (v8 or higher)
+- Python (v3.9 or higher)
+- Git
+- MongoDB (local or Atlas)
+- Dropbox Developer Token
+- Langflow and LangSmith accounts with API keys
 
-GenAI-based chatbot for HR assistance
+---
 
-Dropbox integration for cloud resume storage
+## Quick Installation & Setup
 
-JWT authentication and user profile management
+### 1. Clone the Repository
 
-Langflow and LangSmith integration for contextual parsing, scoring, and traceable AI workflows
-
-Prerequisites
-Ensure the following tools and services are installed or configured:
-
-Node.js (v18 or higher)
-
-npm (v8 or higher)
-
-Python (v3.9 or higher)
-
-Git
-
-MongoDB (local or Atlas)
-
-Dropbox Developer Token
-
-Langflow and LangSmith accounts with API keys
-
-Quick Installation & Setup
-1. Clone the Repository
-bash
-Copy
-Edit
+```bash
 git clone https://github.com/yourusername/vsmart-match.git
 cd vsmart-match
 2. Install Dependencies
+Backend
+
 bash
 Copy
 Edit
-# Backend
 cd Backend
 npm install
+Frontend
 
-# Frontend
+bash
+Copy
+Edit
 cd ../Frontend/vSmart_Match
 npm install
 3. Environment Configuration
-Create a .env file for both frontend and backend.
+Create a .env file in both the Backend and Frontend directories.
 
 Backend .env
+
 env
 Copy
 Edit
@@ -78,19 +75,23 @@ LANGSMITH_API_KEY=your_langsmith_api_key
 LANGSMITH_PROJECT=vSmart_Match
 4. Start the Application
 Start Backend
+
 bash
 Copy
 Edit
 cd Backend
 node server.js
-# Runs at http://localhost:5000
+Runs at: http://localhost:5000
+
 Start Frontend
+
 bash
 Copy
 Edit
 cd Frontend/vSmart_Match
 npm run dev
-# Runs at http://localhost:3000
+Runs at: http://localhost:3000
+
 Database Setup
 Sign up at MongoDB Atlas
 
@@ -98,7 +99,7 @@ Create a cluster and get your connection string
 
 Replace MONGO_URI in your backend .env
 
-Whitelist your IP address
+Whitelist your IP address in MongoDB Atlas
 
 AI Integration Setup
 Langflow Setup
@@ -111,7 +112,7 @@ Create your AI flow
 
 Get the Flow ID
 
-Add to .env as LANGFLOW_FLOW_ID
+Add LANGFLOW_FLOW_ID in your .env
 
 LangSmith Setup
 Sign up at LangSmith
@@ -125,7 +126,7 @@ Go to Dropbox App Console
 
 Create a new app with Scoped access
 
-Generate access token
+Generate an access token
 
 Add token to .env
 
@@ -139,9 +140,15 @@ vSmart_Match/
 │   ├── src/
 │   │   ├── assets/
 │   │   ├── pages/
-│   │   │   ├── Home.jsx, JobDesc.jsx, Login.jsx
-│   │   │   ├── ResumeScreen.jsx, Proposed.jsx, ProfilePage.jsx
-│   │   ├── App.jsx, main.jsx, MainPage.jsx
+│   │   │   ├── Home.jsx
+│   │   │   ├── JobDesc.jsx
+│   │   │   ├── Login.jsx
+│   │   │   ├── ResumeScreen.jsx
+│   │   │   ├── Proposed.jsx
+│   │   │   ├── ProfilePage.jsx
+│   │   ├── App.jsx
+│   │   ├── main.jsx
+│   │   ├── MainPage.jsx
 │   │   └── ProtectedRoute.jsx
 │   ├── package.json
 │   └── .env
@@ -153,6 +160,7 @@ vSmart_Match/
 │   ├── server.js
 │   ├── package.json
 │   └── .env
+
 
 ## Screenshots
 
